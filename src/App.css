@@ -1,0 +1,11 @@
+.room {
+  position: relative;
+}
+.room__floor,
+.room__ceiling,
+.room__wall {
+  border: 1px solid white;
+}
+.room_floor {
+
+}
