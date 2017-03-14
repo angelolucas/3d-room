@@ -1,0 +1,80 @@
+:root {
+  --roomHeight: 200px;
+  --roomLength: 400px;
+  --roomWidth: 200px;
+}
+.room {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  flex-direction: column;
+  perspective: 800px;
+  perspective-origin: 50% 100%;
+}
+.room__container {
+  transform: rotateX(45deg) rotateZ(38deg);
+  transform-style: preserve-3d;
+  position: relative;
+  height: var(--roomLength);
+  width: var(--roomWidth);
+  margin: auto;
+}
+.room__floor,
+.room__ceiling,
+.room__wall {
+  position: absolute;
+}
+.room__floor,
+.room__ceiling {
+  height: var(--roomLength);
+  width: var(--roomWidth);
+  top: 0;
+  left: 0;
+}
+.room__floor {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+}
+.room__ceiling {
+  transform: translateZ(var(--roomHeight));
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid green;
+}
+.room__wall--east,
+.room__wall--west {
+  width: var(--roomHeight);
+  height: var(--roomLength);
+  top: 0;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 2px solid red;
+}
+.room__wall--east {
+  right: 0;
+  transform-origin: center right;
+  transform: rotateY(90deg);
+}
+.room__wall--west {
+  left: 0;
+  transform-origin: center left;
+  transform: rotateY(-90deg);
+}
+.room__wall--north,
+.room__wall--south {
+  width: var(--roomWidth);
+  height: var(--roomHeight);
+  left: 0;
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.room__wall--north {
+  transform: rotateX(90deg);
+  transform-origin: top center;
+  top: 0;
+}
+.room__wall--south {
+  transform: rotateX(-90deg);
+  transform-origin: bottom center;
+  bottom: 0;
+}
