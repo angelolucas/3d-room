@@ -3,15 +3,6 @@
   --roomLength: 200px;
   --roomWidth: 100px;
 }
-.room {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  flex-direction: column;
-  perspective: 800px;
-  perspective-origin: 50% 100%;
-}
 .room__container {
   transform: rotateX(45deg) rotateZ(38deg);
   transform-style: preserve-3d;
@@ -20,11 +11,25 @@
   width: var(--roomWidth);
   margin: auto;
 }
+.room__container * {
+  transform-style: preserve-3d;
+}
+.room {
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  flex-direction: column;
+  perspective: 800px;
+  perspective-origin: 50% 100%;
+}
 .room__floor,
 .room__ceiling,
 .room__wall {
   position: absolute;
-  transform-style: preserve-3d;
 }
 
 /* Floor and Ceiling */
@@ -100,7 +105,6 @@
   transform-origin: left;
   display: flex;
   justify-content: space-between;
-  transform-style: preserve-3d;
 
   &:before,
   &:after {
@@ -124,4 +128,7 @@
   transform-origin: top left;
   transform: rotateY(90deg);
 
+}
+.room__wall--north .room__wall__layer-position {
+  transform: rotateZ(180deg);
 }

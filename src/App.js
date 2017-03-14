@@ -12,44 +12,44 @@ class App extends Component {
           <div className="room__wall room__wall--north">
             <div className="room__wall__layers">
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
             </div>
           </div>
           <div className="room__wall room__wall--south">
             <div className="room__wall__layers">
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
               <div className="room__wall__layer-position">
-                <div className="room__wall__layer"></div>
+                <div className="room__wall__layer">FRONT</div>
               </div>
             </div>
           </div>
