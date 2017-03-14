@@ -1,7 +1,7 @@
 :root {
-  --roomHeight: 200px;
-  --roomLength: 400px;
-  --roomWidth: 200px;
+  --roomHeight: 150px;
+  --roomLength: 200px;
+  --roomWidth: 100px;
 }
 .room {
   display: flex;
@@ -24,7 +24,10 @@
 .room__ceiling,
 .room__wall {
   position: absolute;
+  transform-style: preserve-3d;
 }
+
+/* Floor and Ceiling */
 .room__floor,
 .room__ceiling {
   height: var(--roomLength);
@@ -33,21 +36,24 @@
   left: 0;
 }
 .room__floor {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
 }
 .room__ceiling {
   transform: translateZ(var(--roomHeight));
-  background-color: rgba(0, 255, 0, 0.1);
-  border: 2px solid green;
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid green;
 }
+
+/*  Walls
+    East West */
 .room__wall--east,
 .room__wall--west {
   width: var(--roomHeight);
   height: var(--roomLength);
   top: 0;
-  background-color: rgba(255, 0, 0, 0.1);
-  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
 }
 .room__wall--east {
   right: 0;
@@ -59,13 +65,16 @@
   transform-origin: center left;
   transform: rotateY(-90deg);
 }
+
+/*  Walls
+    North South */
 .room__wall--north,
 .room__wall--south {
   width: var(--roomWidth);
   height: var(--roomHeight);
   left: 0;
-  border: 2px solid blue;
-  background-color: rgba(0, 0, 255, 0.1);
+  border: 1px solid blue;
+  background-color: rgba(0, 0, 255, 0.2);
 }
 
 .room__wall--north {
@@ -77,4 +86,42 @@
   transform: rotateX(-90deg);
   transform-origin: bottom center;
   bottom: 0;
+}
+
+/*  Walls 
+    Layers */
+.room__wall__layers {
+  width: 250px;
+  position: absolute;
+  height: var(--roomHeight);
+  top: 0;
+  transform: rotateY(-90deg);
+  left: 0;
+  transform-origin: left;
+  display: flex;
+  justify-content: space-between;
+  transform-style: preserve-3d;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+  }
+  &:after {
+    transform: translateZ(-var(--roomWidth));
+  }
+}
+.room__wall__layer {
+  background-color: rgba(255, 255 0, 0.2);
+  border: 1px solid yellow;
+  position: absolute;
+  width: var(--roomWidth);
+  height: var(--roomHeight);
+  transform-origin: top left;
+  transform: rotateY(90deg);
+
 }
