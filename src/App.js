@@ -9,7 +9,28 @@ class App extends Component {
         <div className="room__container">
           <div className="room__floor"></div>
           <div className="room__ceiling"></div>
-          <div className="room__wall room__wall--north"></div>
+          <div className="room__wall room__wall--north">
+            <div className="room__wall__layers">
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer"></div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer"></div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer"></div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer"></div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer"></div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer"></div>
+              </div>
+            </div>
+          </div>
           <div className="room__wall room__wall--south">
             <div className="room__wall__layers">
               <div className="room__wall__layer-position">
