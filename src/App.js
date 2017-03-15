@@ -117,7 +117,28 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div className="room__wall room__wall--west"></div>
+          <div className="room__wall room__wall--west">
+            <div className="room__wall__layers">
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer">FRONT</div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer">FRONT</div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer">FRONT</div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer">FRONT</div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer">FRONT</div>
+              </div>
+              <div className="room__wall__layer-position">
+                <div className="room__wall__layer">FRONT</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

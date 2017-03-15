@@ -157,6 +157,22 @@
 }
 
 /*  Walls 
+    West Layers */
+.room__wall--west .room__wall__layers {
+  left: 100%;
+  top: 100%;
+  transform: rotateY(-90deg) rotateX(90deg);
+  transform-origin: top left;
+}
+.room__wall--west .room__wall__layer {
+  width: var(--roomLength);
+  transform: rotateY(-90deg);
+}
+.room__wall--west .room__wall__layers:after {
+  transform: translateZ(var(--roomLength));
+}
+
+/*  Walls 
     Floor Layers */
 .room__floor {
   transform: rotateX(180deg);
