@@ -5,10 +5,12 @@
 }
 .room {
   text-align: center;
-  color: white;
+  color: yellow;
   letter-spacing: 5px;
+  font-weight: 100;
   display: flex;
-  height: 100vh;
+  height: 80vh;
+  margin-top: 20vh;
   margin-left: 300px;
   justify-content: center;
   flex-direction: column;
@@ -102,8 +104,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-top: 1px dotted white;
-    border-bottom: 1px dotted white;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     top: 0;
     left: 0;
   }
