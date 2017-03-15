@@ -3,7 +3,7 @@ import './Tools.css';
 
 class Tools extends Component {
   componentWillMount() {
-    this.initialExpand = 500;
+    this.initialExpand = 200;
     this.initialRotate = 38;
     this.initialPerspective = 800;
   }
@@ -57,6 +57,15 @@ class Tools extends Component {
         el.style.perspective = `${val}px`;
       });
     }
+
+    window.setTimeout(() => {
+      this.updateExpand(this.initialExpand);
+      this.updateRotate(this.initialRotate);
+    }, 1000);
+    
+    window.setTimeout(() => {
+      document.querySelector('body').classList.add('played');
+    }, 3000);
   }
   render() {
     return (
@@ -144,18 +153,6 @@ class Tools extends Component {
                   onInput={() => this.updatePerspective(this.perspectiveRange.value)}
                 />
               </labe>
-            </li>
-            <li className="tool">
-              <label className="tool__label">
-                colors
-                <input className="tool__input" type="checkbox" />
-              </label>
-            </li>
-            <li className="tool">
-              <label className="tool__label">
-                layers
-                <input className="tool__input" type="checkbox" />
-              </label>
             </li>
           </ul>
         </form>

@@ -17,8 +17,12 @@
   perspective: 800px;
   perspective-origin: 50% 100%;
 }
+body.played .room__container {
+  transition: 0s transform;
+}
 .room__container {
-  transform: rotateX(38deg) rotateZ(38deg);
+  transition: 2s transform;
+  transform: rotateX(0deg) rotateZ(0deg);
   transform-style: preserve-3d;
   position: relative;
   height: var(--roomLength);
@@ -87,8 +91,12 @@
 
 /*  Walls 
     Layers */
+body.played .room__wall__layers {
+  transition: 0s width;
+}
 .room__wall__layers {
-  width: 200px;
+  transition: 2s width;
+  width: 0;
   position: absolute;
   height: var(--roomHeight);
   top: 0;
