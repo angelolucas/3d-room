@@ -9,7 +9,7 @@ class Room extends Component {
 
           {/* Floor */}
           <div className="room__floor">
-            <div className="room__wall__layers">
+            <div className="room__wall__layers" data-expand>
               <div className="room__wall__layer-position">
                 <div className="room__wall__layer">floor</div>
               </div>
@@ -33,7 +33,7 @@ class Room extends Component {
 
           {/* Ceiling */}
           <div className="room__ceiling">
-            <div className="room__wall__layers">
+            <div className="room__wall__layers" data-expand>
               <div className="room__wall__layer-position">
                 <div className="room__wall__layer">ceiling</div>
               </div>
@@ -57,7 +57,7 @@ class Room extends Component {
 
           {/* North Wall */}
           <div className="room__wall room__wall--north">
-            <div className="room__wall__layers">
+            <div className="room__wall__layers" data-expand>
               <div className="room__wall__layer-position">
                 <div className="room__wall__layer">north</div>
               </div>
@@ -81,7 +81,7 @@ class Room extends Component {
 
           {/* South Wall */}
           <div className="room__wall room__wall--south">
-            <div className="room__wall__layers">
+            <div className="room__wall__layers" data-expand>
               <div className="room__wall__layer-position">
                 <div className="room__wall__layer">south</div>
               </div>
@@ -105,7 +105,7 @@ class Room extends Component {
 
           {/* East Wall */}
           <div className="room__wall room__wall--east">
-            <div className="room__wall__layers">
+            <div className="room__wall__layers" data-expand>
               <div className="room__wall__layer-position">
                 <div className="room__wall__layer">east</div>
               </div>
@@ -129,7 +129,7 @@ class Room extends Component {
 
           {/* West Wall */}
           <div className="room__wall room__wall--west">
-            <div className="room__wall__layers">
+            <div className="room__wall__layers" data-expand>
               <div className="room__wall__layer-position">
                 <div className="room__wall__layer">west</div>
               </div>

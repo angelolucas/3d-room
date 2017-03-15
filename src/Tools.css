@@ -22,6 +22,10 @@
   margin-bottom: 30px;
   list-style: none;
 }
-.tool__input {
+.tool__number {
+  margin: 0 10px 10px;
+}
+.tool__range {
   width: 100%;
+
 }
