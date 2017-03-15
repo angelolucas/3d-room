@@ -1,6 +1,7 @@
 {
-  "name": "medmodular",
+  "name": "3d-room",
   "version": "0.1.0",
+  "homepage": "https://angelolucas.github.io/3d-room/",
   "private": true,
   "devDependencies": {
     "autoprefixer": "6.7.2",
@@ -49,7 +50,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
