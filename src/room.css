@@ -3,6 +3,18 @@
   --roomLength: 150px;
   --roomWidth: 100px;
 }
+.room {
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  display: flex;
+  height: 100vh;
+  margin-left: 300px;
+  justify-content: center;
+  flex-direction: column;
+  perspective: 800px;
+  perspective-origin: 50% 100%;
+}
 .room__container {
   transform: rotateX(38deg) rotateZ(38deg);
   transform-style: preserve-3d;
@@ -13,18 +25,6 @@
 }
 .room__container * {
   transform-style: preserve-3d;
-}
-.room {
-  text-align: center;
-  color: white;
-  letter-spacing: 5px;
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  flex-direction: column;
-  perspective: 800px;
-  perspective-origin: 50% 100%;
 }
 .room__floor,
 .room__ceiling,
@@ -40,14 +40,8 @@
   top: 0;
   left: 0;
 }
-.room__floor {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
-}
 .room__ceiling {
-  transform: translateZ(var(--roomHeight));
-  background-color: rgba(0, 255, 0, 0.2);
-  border: 1px solid green;
+  transform: translateZ(var(--roomHeight)); 
 }
 
 /*  Walls
@@ -57,8 +51,6 @@
   width: var(--roomHeight);
   height: var(--roomLength);
   top: 0;
-  background-color: rgba(255, 0, 0, 0.2);
-  border: 1px solid red;
 }
 .room__wall--east {
   right: 0;
@@ -78,8 +70,6 @@
   width: var(--roomWidth);
   height: var(--roomHeight);
   left: 0;
-  border: 1px solid blue;
-  background-color: rgba(0, 0, 255, 0.2);
 }
 
 .room__wall--north {

@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Tools from './Tools';
+import Room from './Room';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <div>
+    <Tools />
+    <Room />
+  </div>,
   document.getElementById('root')
 );
