@@ -1,10 +1,10 @@
 :root {
-  --roomHeight: 100px;
-  --roomLength: 200px;
+  --roomHeight: 80px;
+  --roomLength: 150px;
   --roomWidth: 100px;
 }
 .room__container {
-  transform: rotateX(45deg) rotateZ(38deg);
+  transform: rotateX(38deg) rotateZ(38deg);
   transform-style: preserve-3d;
   position: relative;
   height: var(--roomLength);
@@ -96,7 +96,7 @@
 /*  Walls 
     Layers */
 .room__wall__layers {
-  width: 250px;
+  width: 200px;
   position: absolute;
   height: var(--roomHeight);
   top: 0;
@@ -125,8 +125,8 @@
   height: 100%; 
 }
 .room__wall__layer {
-  background-color: rgba(255, 255 0, 0.2);
-  border: 1px solid yellow;
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid green;
   position: absolute;
   width: var(--roomWidth);
   height: 100%;
@@ -152,3 +152,9 @@
 .room__floor .room__wall__layer-position {
   transform: rotateZ(180deg);
 }
+
+/*  Walls 
+    Ceiling Layers */
+.room__ceiling .room__wall__layers {
+  height: var(--roomLength);
+}   
