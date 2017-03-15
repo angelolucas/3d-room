@@ -1,5 +1,5 @@
 :root {
-  --roomHeight: 150px;
+  --roomHeight: 100px;
   --roomLength: 200px;
   --roomWidth: 100px;
 }
@@ -114,21 +114,41 @@
     height: 100%;
     border-top: 1px dotted white;
     border-bottom: 1px dotted white;
+    top: 0;
+    left: 0;
   }
   &:after {
     transform: translateZ(-var(--roomWidth));
   }
+}
+.room__wall__layer-position {
+  height: 100%; 
 }
 .room__wall__layer {
   background-color: rgba(255, 255 0, 0.2);
   border: 1px solid yellow;
   position: absolute;
   width: var(--roomWidth);
-  height: var(--roomHeight);
+  height: 100%;
   transform-origin: top left;
   transform: rotateY(90deg);
 
 }
+
+/*  Walls 
+    North Layers */
 .room__wall--north .room__wall__layer-position {
+  transform: rotateZ(180deg);
+}
+
+/*  Walls 
+    Floor Layers */
+.room__floor {
+  transform: rotateX(180deg);
+}
+.room__floor .room__wall__layers {
+  height: var(--roomLength);
+}
+.room__floor .room__wall__layer-position {
   transform: rotateZ(180deg);
 }
