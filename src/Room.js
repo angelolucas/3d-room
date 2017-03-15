@@ -4,8 +4,8 @@ import './Room.css';
 class Room extends Component {
   render() {
     return (
-      <div className="room">
-        <div className="room__container">
+      <div className="room" data-perspective>
+        <div className="room__container" data-rotate>
 
           {/* Floor */}
           <div className="room__floor">

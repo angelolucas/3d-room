@@ -4,6 +4,8 @@ import './Tools.css';
 class Tools extends Component {
   componentWillMount() {
     this.initialExpand = 500;
+    this.initialRotate = 38;
+    this.initialPerspective = 800;
   }
   componentDidMount() {
 
@@ -19,7 +21,41 @@ class Tools extends Component {
       [].forEach.call(selectExpand, (el) => {
         el.style.width = `${val}px`;
       });
+    }
 
+    // Rotate Input
+    this.rotateRange.value = this.initialRotate;
+    this.rotateNumber.value = this.initialRotate;
+    const selectRotate = document.querySelectorAll('[data-rotate]');
+
+    this.updateRotate = (val) => {      
+      this.rotateRange.value = val;
+      this.rotateNumber.value = val;
+
+      [].forEach.call(selectRotate, (el) => {
+        el.style.transform = `rotateX(38deg) rotateZ(${val}deg)`;
+      });
+    }
+
+    // Perspective Input
+    this.perspectiveRange.value = this.initialPerspective;
+    this.perspectiveNumber.value = this.initialPerspective;
+    const selectPerspective = document.querySelectorAll('[data-perspective]');
+
+    this.updatePerspective = (val) => {      
+      this.perspectiveRange.value = val;
+      this.perspectiveNumber.value = val;
+
+      
+
+      if (val > 9999) {
+        val = 9999999999;
+        console.log(val);
+      }
+
+      [].forEach.call(selectPerspective, (el) => {
+        el.style.perspective = `${val}px`;
+      });
     }
   }
   render() {
@@ -30,7 +66,7 @@ class Tools extends Component {
           <ul>
             <li className="tool">
               <labe className="tool__label">
-                expad
+                expand
 
                 <input
                   ref={(expandNumber) => { this.expandNumber = expandNumber; }}
@@ -56,22 +92,58 @@ class Tools extends Component {
               </labe>
             </li>
             <li className="tool">
-              <label className="tool__label">
+              <labe className="tool__label">
                 rotate
-                <input className="tool__range" type="range"/>
-              </label>
+
+                <input
+                  ref={(rotateNumber) => { this.rotateNumber = rotateNumber; }}
+                  className="tool__number"
+                  type="number"
+                  name="amountInput"
+                  min="0"
+                  max="360"
+                  onInput={() => this.updateRotate(this.rotateNumber.value)}
+                />
+
+                px
+
+                <input
+                  ref={(rotateRange) => { this.rotateRange = rotateRange; }}
+                  className="tool__range"
+                  type="range"
+                  name="amountRange"
+                  min="0"
+                  max="360"
+                  onInput={() => this.updateRotate(this.rotateRange.value)}
+                />
+              </labe>
             </li>
             <li className="tool">
-              <label className="tool__label">
+              <labe className="tool__label">
                 perspective
-                <input className="tool__range" type="range"/>
-              </label>
-            </li>
-            <li className="tool">
-              <label className="tool__label">
-                zoom
-                <input className="tool__range" type="range"/>
-              </label>
+
+                <input
+                  ref={(perspectiveNumber) => { this.perspectiveNumber = perspectiveNumber; }}
+                  className="tool__number"
+                  type="number"
+                  name="amountInput"
+                  min="400"
+                  max="10000"
+                  onInput={() => this.updatePerspective(this.perspectiveNumber.value)}
+                />
+
+                px
+
+                <input
+                  ref={(perspectiveRange) => { this.perspectiveRange = perspectiveRange; }}
+                  className="tool__range"
+                  type="range"
+                  name="amountRange"
+                  min="400"
+                  max="10000"
+                  onInput={() => this.updatePerspective(this.perspectiveRange.value)}
+                />
+              </labe>
             </li>
             <li className="tool">
               <label className="tool__label">
