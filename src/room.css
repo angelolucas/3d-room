@@ -142,6 +142,21 @@
 }
 
 /*  Walls 
+    East Layers */
+.room__wall--east .room__wall__layers {
+  top: 100%;
+  left: 0%;
+  transform-origin: top left;
+  transform: rotateY(-90deg) rotateX(-90deg);
+}
+.room__wall--east .room__wall__layer {
+  width: var(--roomLength);
+}
+.room__wall--east .room__wall__layers:after {
+  transform: translateZ(-var(--roomLength));
+}
+
+/*  Walls 
     Floor Layers */
 .room__floor {
   transform: rotateX(180deg);
@@ -157,4 +172,5 @@
     Ceiling Layers */
 .room__ceiling .room__wall__layers {
   height: var(--roomLength);
-}   
+}
+
